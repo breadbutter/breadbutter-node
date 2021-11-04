@@ -1,25 +1,23 @@
 {
   "name": "breadbutter-nodejs",
-  "version": "1.0.0",
-  "description": "BreadButter Node.js SDK",
+  "version": "5.2.0",
+  "description": "BreadButter Node.js Server Library",
   "main": "lib/breadbutter.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://hleelogonlabs@bitbucket.org/logonlabs/breadbutter-library-node.git"
+    "url": "https://github.com/breadbutter/breadbutter-node"
   },
-  "authors": [
-    {
-      "name": "Howie Lee",
-      "email": "hlee@breadbutter.io"
-    }
-  ],
+  "author": "Bread & Butter IO",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/breadbutter/breadbutter-library-node#readme",
+  "bugs": {
+    "url": "https://github.com/breadbutter/breadbutter-node/issues"
+  },
+  "homepage": "https://github.com/breadbutter/breadbutter-node",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.24.0"
   },
   "devDependencies": {
     "mocha": "^9.0.3",

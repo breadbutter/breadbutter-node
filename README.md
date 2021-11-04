@@ -18,8 +18,7 @@ npm install breadbutter-nodejs --save
 ---
 ### Instantiating a new client
 
-- `APP_ID` can be found in [App Settings](https://app.breadbutter.io/app/#/app-settings)
-- `APP_SECRET` is configured at [App Secrets](https://app.breadbutter.io/app/#/app-secrets)
+- `APP_ID` and `APP_SECRET` can be found in [App Settings](https://app.breadbutter.io/app/#/app-settings)
 - `BREADBUTTER_API_ENDPOINT` should be set to `https://api.breadbutter.io`
 
 Create a new instance from `BreadButter`.  
@@ -35,13 +34,18 @@ The StartAuthentication function in the JS library begins the Bread Butter manag
 
 ---
 ### Node.js Workflow
-The following example demonstrates what to do once the `callback Url` has been used by our system to redirect the user back to your page:
+The following example demonstrates what to do once the `callback url` has been used by our system to redirect the user back to your page:
 
 ```javascript
 const client = require('breadbutter-nodejs')('APP_ID', 'APP_SECRETS', 'BREADBUTTER_API_ENDPOINT');
 
 client.getAuthentication('AUTHENTICATION_TOKEN').then((response) => {
-    console.log('Complete Authnetication:');
-    console.log(response);
+    
+    let authData = response.auth_data;
+    
+    let emailAddress = authData.email_address;
+    let firstName = authData.first_name;
+    let lastName = authData.last_name;
+    let profileImage = authData.profile_image_url;
 });
 ```
